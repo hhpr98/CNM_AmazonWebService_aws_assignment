@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ocr));
             this.textURL = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.btnOCR = new System.Windows.Forms.Button();
@@ -97,6 +98,7 @@
             this.Controls.Add(this.btnOCR);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.textURL);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ocr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhận diện chữ trong ảnh";
