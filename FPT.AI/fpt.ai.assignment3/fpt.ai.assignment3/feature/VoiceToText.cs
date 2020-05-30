@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace fpt.ai.assignment3
+namespace fpt.ai.assignment3.feature
 {
-    public partial class Form1 : Form
+    public partial class VoiceToText : Form
     {
-        public Form1()
+        public VoiceToText()
         {
             InitializeComponent();
         }
