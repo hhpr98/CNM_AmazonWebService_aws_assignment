@@ -61,11 +61,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\ocr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\ocr.Designer.cs">
+      <DependentUpon>ocr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Translate.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Features\Translate.Designer.cs">
       <DependentUpon>Translate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\unsafeText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\unsafeText.Designer.cs">
+      <DependentUpon>unsafeText.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\VoiceTrans.cs">
       <SubType>Form</SubType>
@@ -81,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Features\ocr.resx">
+      <DependentUpon>ocr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\Translate.resx">
       <DependentUpon>Translate.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +149,9 @@
     <Content Include="Resources\ic_banned.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classss\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

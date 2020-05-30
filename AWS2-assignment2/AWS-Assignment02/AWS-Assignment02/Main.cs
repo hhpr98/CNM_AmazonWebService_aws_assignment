@@ -41,12 +41,18 @@ namespace AWS_Assignment02
 
         private void btn1_Click(object sender, EventArgs e)
         {
-
+            unsafeText frm = new unsafeText();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-
+            ocr frm = new ocr();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btn3_Click(object sender, EventArgs e)

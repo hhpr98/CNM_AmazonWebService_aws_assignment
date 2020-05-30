@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Amazon;
-using Amazon.Rekognition;
-using Amazon.Rekognition.Model;
 using Amazon.Translate;
 using Amazon.Translate.Model;
 
@@ -61,10 +53,7 @@ namespace AWS_Assignment02.Features
 
         private void BtnTrans_Click(object sender, EventArgs e)
         {
-            var accessKey = "AKIAS2N7KSCFG34QRCRA";
-            var secretKey = "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";
-
-            var client = new AmazonTranslateClient(accessKey, secretKey, RegionEndpoint.APSoutheast1);
+            var client = new AmazonTranslateClient();
 
             var request = new TranslateTextRequest
             {

@@ -17,9 +17,10 @@ namespace AWS_Assignment02
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            //Application.Run(new Main());
             //Application.Run(new Translate());
             //Application.Run(new VoiceTrans());
+            Application.Run(new ocr());
         }
     }
 }
