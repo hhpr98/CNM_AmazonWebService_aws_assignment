@@ -20,7 +20,8 @@ namespace AWS_Assignment02
             //Application.Run(new Main());
             //Application.Run(new Translate());
             //Application.Run(new VoiceTrans());
-            Application.Run(new ocr());
+            //Application.Run(new ocr());
+            Application.Run(new unsafeText());
         }
     }
 }

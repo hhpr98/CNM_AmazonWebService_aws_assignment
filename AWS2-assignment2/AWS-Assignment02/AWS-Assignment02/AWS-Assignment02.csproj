@@ -99,6 +99,9 @@
     <EmbeddedResource Include="Features\Translate.resx">
       <DependentUpon>Translate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Features\unsafeText.resx">
+      <DependentUpon>unsafeText.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\VoiceTrans.resx">
       <DependentUpon>VoiceTrans.cs</DependentUpon>
     </EmbeddedResource>
