@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using fpt.ai.assignment3.Classss;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Threading;
 
 namespace fpt.ai.assignment3.feature
 {
@@ -23,7 +24,7 @@ namespace fpt.ai.assignment3.feature
         private static extern int record(string lpstrCommand, string lpstrReturnString, int uReturnLength, int hwndCallback);
 
         private string fileName = "";
-        private Timer tmr = new Timer();
+        private System.Windows.Forms.Timer tmr = new System.Windows.Forms.Timer();
         private int t = 0;
         private DateTime start;
 
@@ -35,15 +36,14 @@ namespace fpt.ai.assignment3.feature
             txtRes.ScrollToCaret();
             txtURL.ReadOnly = true;
             txtRes.ReadOnly = true;
+            tmr.Interval = 1000; // 1s
         }
 
         private void btnRecord_Click(object sender, EventArgs e)
         {
-
             lblRecording.Visible = true;
             this.Text = "Đang ghi âm";
             fileName = $"C:\\{Guid.NewGuid()}.mp3";
-            tmr.Interval = 1000; // 1s
             tmr.Tick += Tmr_Tick;
             t = 0;
             start = DateTime.Now;
@@ -152,8 +152,11 @@ namespace fpt.ai.assignment3.feature
             }
 
             lbl3.Text = "00";
+            txtRes.Text = "Đang chuyển.......";
 
-            var apikey = "V6g9JmmqFy2KAff2ZxeId29RNYy12KUb";
+            //var apikey = "V6g9JmmqFy2KAff2ZxeId29RNYy12KUb";
+            var apikey = "ZJZY2Eabdg6rGH1aUJ009i3qCLqUPVYI";
+
             var file = txtURL.Text;
             var payload = File.ReadAllBytes(file);
 
@@ -167,14 +170,15 @@ namespace fpt.ai.assignment3.feature
                     return await response.Content.ReadAsStringAsync();
 
                 }).GetAwaiter().GetResult();
+
+                Thread.Sleep(2000); // sleep about 2s to wait for FPT server response
                 var data = JsonConvert.DeserializeObject<SpeechToTextClass>(json);
                 //MessageBox.Show(data.hypotheses[0].utterance);
                 txtRes.Text = data.hypotheses[0].utterance;
-
-
             }
             catch (Exception ex)
             {
+                txtRes.Text = "Lỗi";
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

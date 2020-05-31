@@ -71,7 +71,8 @@ namespace fpt.ai.assignment3.feature
 
         private void BtnTrans_Click(object sender, EventArgs e)
         {
-            var apikey = "V6g9JmmqFy2KAff2ZxeId29RNYy12KUb";
+            //var apikey = "V6g9JmmqFy2KAff2ZxeId29RNYy12KUb";
+            var apikey = "ZJZY2Eabdg6rGH1aUJ009i3qCLqUPVYI";
 
             this.Text = "Đang tải";
 
@@ -100,7 +101,7 @@ namespace fpt.ai.assignment3.feature
             var currentFolder = AppDomain.CurrentDomain.BaseDirectory;
             var fileName = $"{currentFolder}{Guid.NewGuid()}.mp3";
 
-            Thread.Sleep(2000); // ngắt tầm 2s, download liên tục sẽ khiến server trả về 404 Not Found
+            Thread.Sleep(4000); // ngắt tầm 2s, download liên tục sẽ khiến server trả về 404 Not Found
             using (var client = new WebClient())
             {
                 client.DownloadFile(data.async,fileName);
