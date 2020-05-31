@@ -17,9 +17,9 @@ namespace fpt.ai.assignment3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Main());
+            Application.Run(new Main());
             //Application.Run(new TextToVoice());
-            Application.Run(new VoiceToText());
+            //Application.Run(new VoiceToText());
         }
     }
 }
