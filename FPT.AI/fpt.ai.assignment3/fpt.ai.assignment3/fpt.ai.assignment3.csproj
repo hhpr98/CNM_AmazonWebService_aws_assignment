@@ -36,7 +36,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons8_Ledger.ico</ApplicationIcon>
+    <ApplicationIcon>icons8_Voice_Recognition.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -116,6 +116,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="icons8_Ledger.ico" />
+    <Content Include="icons8_Voice_Recognition.ico" />
     <Content Include="Resources\avt.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

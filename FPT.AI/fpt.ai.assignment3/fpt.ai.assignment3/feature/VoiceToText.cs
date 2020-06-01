@@ -43,7 +43,7 @@ namespace fpt.ai.assignment3.feature
         {
             lblRecording.Visible = true;
             this.Text = "Đang ghi âm";
-            fileName = $"C:\\{Guid.NewGuid()}.mp3";
+            fileName = $"D:\\{Guid.NewGuid()}.mp3";
             tmr.Tick += Tmr_Tick;
             t = 0;
             start = DateTime.Now;

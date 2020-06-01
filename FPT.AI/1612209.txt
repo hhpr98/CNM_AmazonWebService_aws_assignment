@@ -1,3 +1,3 @@
-Demo youtube : https://youtu.be/LTvtpjOYKf0
+Demo youtube : (Sẽ update link sau, server FPT.AI đang bị lỗi 404 nên không demo được)
 
-Code : https://github.com/hhpr98/CNM_AmazonWebService_aws_assignment/tree/master/FPT.AI/fpt.ai.assignment3
+Code : https://github.com/hhpr98/CNM_AmazonWebService_aws_assignment/tree/master/FPT.AI
