@@ -8,7 +8,7 @@ function setup() {
 
     // create an image using the p5 dom library
     // call modelReady() when it is loaded
-    img = createImg('images/55M2LYRUYNEWLEOM2KR5WSIYXY.jpg', imageReady);
+    img = createImg('../images/55M2LYRUYNEWLEOM2KR5WSIYXY.jpg', imageReady);
     // set the image size to the size of the canvas
     img.size(width, height);
 

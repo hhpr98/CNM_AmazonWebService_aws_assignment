@@ -3,7 +3,7 @@ let segmentation;
 let img;
 
 function preload() {
-    img = loadImage('images/body2.jpg');
+    img = loadImage('../images/body2.jpg');
     bodypix = ml5.bodyPix()
 }
 
