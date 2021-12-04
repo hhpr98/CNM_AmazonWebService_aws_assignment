@@ -12,8 +12,8 @@
   "author": "nguyenhuuhoa",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^0.12.3",
-    "lite-server": "^2.6.0",
+    "http-server": "^14.0.0",
+    "lite-server": "^2.6.1",
     "ml5": "^1.0.0"
   }
 }
