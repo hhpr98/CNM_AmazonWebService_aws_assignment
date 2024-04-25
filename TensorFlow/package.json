@@ -1,8 +1,8 @@
 {
   "name": "tensorflow",
-  "version": "1.0.0",
-  "description": "",
-  "main": "sketch.js",
+  "version": "1.0.1",
+  "description": "The demo for AI that using ml5 and p5",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run lite",
