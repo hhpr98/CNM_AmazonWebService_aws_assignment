@@ -3,12 +3,11 @@ let poseNet;
 let poses = [];
 
 function setup() {
-    //createCanvas(640, 360);
     createCanvas(1400, 932);
 
     // create an image using the p5 dom library
     // call modelReady() when it is loaded
-    img = createImg('../images/55M2LYRUYNEWLEOM2KR5WSIYXY.jpg', imageReady);
+    img = createImg("../images/55M2LYRUYNEWLEOM2KR5WSIYXY.jpg", imageReady);
     // set the image size to the size of the canvas
     img.size(width, height);
 
@@ -17,25 +16,25 @@ function setup() {
 }
 
 // when the image is ready, then load up poseNet
-function imageReady(){
+function imageReady() {
     // set some options
     let options = {
         imageScaleFactor: 1,
         minConfidence: 0.1
     }
-    
+
     // assign poseNet
     poseNet = ml5.poseNet(modelReady, options);
     // This sets up an event that listens to 'pose' events
-    poseNet.on('pose', function (results) {
+    poseNet.on("pose", function (results) {
         poses = results;
     });
 }
 
 // when poseNet is ready, do the detection
 function modelReady() {
-    select('#status').html('Model Loaded');
-     
+    select("#status").html("Model Loaded");
+
     // When the model is ready, run the singlePose() function...
     // If/When a pose is detected, poseNet.on('pose', ...) will be listening for the detection results 
     // in the draw() loop, if there are any poses, then carry out the draw commands

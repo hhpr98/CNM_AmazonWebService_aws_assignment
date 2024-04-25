@@ -23,11 +23,9 @@ function gotResult(error, results) {
   } else {
     // The results are in an array ordered by confidence.
     console.log(results);
-    for(var i = 0; i < 3; i++) {
-        createDiv(`Label: ${results[i].label}`);
-        createDiv(`Confidence: ${nf(results[i].confidence, 0, 2)}`);
+    for (var i = 0; i < 3; i++) {
+      createDiv(`Label: ${results[i].label}`);
+      createDiv(`Confidence: ${nf(results[i].confidence, 0, 2)}`);
     }
-    
   }
 }
-
